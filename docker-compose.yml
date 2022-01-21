@@ -1,0 +1,23 @@
+version: "3.6"
+services:
+  {wp-db}:
+    image: mysql:5.7
+    environment:
+      MYSQL_DATABASE: {wp-db}
+      MYSQL_USER: {wp-db-user}
+      MYSQL_PASSWORD: {wp-pass}
+      MYSQL_ROOT_PASSWORD: root
+    expose:
+        - "3306"
+    volumes:
+    - {wp-db}:/var/lib/mysql
+  
+  web:
+    build: .
+    ports:
+     - {wp-port}:80
+    volumes:
+    - ./wp-content:/app/wp-content
+
+volumes:
+    {wp-db}:
