@@ -35,6 +35,8 @@ then
   sed -i'' -e "s/{wp-port}/$openPort/g" docker-compose.yml
   sed -i'' -e "s/{wp-db-user}/$dbUser/g" docker-compose.yml
   sed -i'' -e "s/{wp-pass}/$dbPassword/g" docker-compose.yml
+else
+  echo "System not supported-- Manual configuration of docker-compose.yml required."
 fi
 
 docker-compose build
