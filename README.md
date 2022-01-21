@@ -21,5 +21,8 @@ Enter in the database connection details on the wordpress installation screen.
 
 **Notice:** The database default location is localhost and will not work. Use your project name as the database address. This is listed under `volumes:` at the end of docker-compose.yml if you've forgotten it.
 
+## Using the Project
+This project exposes the `wp-content` folder in the project root. All of Wordpress' core files are consolidated into the `wp-core` directory. Any change to the core files requires you to rebuild the project in order for it to take effect. 
+
 ## License
 MIT
