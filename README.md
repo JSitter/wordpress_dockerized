@@ -9,7 +9,7 @@ Fancy Wordpress container for developing plugins and themes.
 Not currently tested on Mac or Windows machines.
 
 ## Installation
-Run `./install.sh` in the terminal to set download wordpress files and set up project details.
+Run `./install.sh` in the terminal to download wordpress files and set up project details.
 
 The install script will ask you for various project information to set up the `docker-compose.yml` file with.
 
