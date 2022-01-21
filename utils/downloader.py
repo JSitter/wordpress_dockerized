@@ -57,7 +57,7 @@ def update_file(temp_location, file, destination, replace=False):
 def unpack_gz_into(source, destination, replace=False, save_extract=False):
     tar = tarfile.open(source, 'r:gz')
     allfiles = tar.getnames()
-    print(allfiles)
+
     temp_source_dir = "{}/{}".format(temp_dir, allfiles[0])
 
     check_dir(temp_dir)
