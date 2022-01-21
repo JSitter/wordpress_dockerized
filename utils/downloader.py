@@ -57,6 +57,7 @@ def update_file(temp_location, file, destination, replace=False):
 def unpack_gz_into(source, destination, replace=False, save_extract=False):
     tar = tarfile.open(source, 'r:gz')
     allfiles = tar.getnames()
+    print(allfiles)
     temp_source_dir = "{}/{}".format(temp_dir, allfiles[0])
 
     check_dir(temp_dir)
@@ -157,3 +158,4 @@ def handle_wp_download(download_url, filename, source_hash=""):
 
 if __name__ == '__main__':
     handle_wp_download(wordpress_download_url, 'latest.tar.gz')
+    unpack_gz_into(temp_dir+'/latest.tar.gz', "wp-core" )
